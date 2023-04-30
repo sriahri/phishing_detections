@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Phishing Emails and Spam Messages</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  	body {
+  		font-family: Arial, sans-serif;
+  		background-color: #f2f2f2;
+  		padding: 20px;
+  		line-height: 1.5;
+  	}
+  	h1 {
+  		font-size: 36px;
+  		font-weight: bold;
+  		margin-bottom: 30px;
+  		text-align: center;
+      color: #333;
+  	}
+  	h2 {
+  		font-size: 24px;
+  		font-weight: bold;
+  		margin-top: 40px;
+      color: #333;
+  	}
+  	p {
+  		font-size: 18px;
+  		margin-top: 20px;
+  		margin-bottom: 20px;
+      color: #666;
+  	}
+  	img {
+  		display: block;
+  		margin: 0 auto;
+  		max-width: 100%;
+  		height: auto;
+  	}
+  	a {
+  		display: block;
+  		margin-bottom: 40px;
+      text-align: center;
+  	}
+  	a:hover {
+  		opacity: 0.8;
+  	}
+    @media only screen and (max-width: 768px) {
+      h1 {
+        font-size: 30px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 16px;
+      }
+      a {
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+	<h1>Phishing Emails and Spam Messages</h1>
+	<p>Phishing emails and spam messages are two common types of online scams that can cause harm to individuals and businesses. Both types of messages are designed to trick recipients into clicking on a link, downloading a file, or entering personal information.</p>
+	<h2>Phishing Emails</h2>
+	<p>Phishing emails are fraudulent messages that appear to come from a legitimate source, such as a bank, social media platform, or online retailer. The goal of these emails is to steal sensitive information, such as login credentials or credit card numbers, by tricking recipients into clicking on a link and entering their information on a fake website.</p>
+	<p>Phishing emails can be difficult to spot, as they often use convincing logos, graphics, and language to make them appear legitimate. To avoid falling victim to a phishing scam, it's important to never click on links in emails from unknown senders or enter sensitive information on unfamiliar websites.</p>
+	<h2>Spam Messages</h2>
+	<p>Spam messages are unsolicited emails or text messages that are sent in bulk to a large number of recipients. These messages can contain a variety of content, including advertisements, scams, and malware. Spam messages can be annoying and time-consuming to deal with, and can also pose a security risk if they contain malicious links or attachments.</p>
+	<p>To reduce the amount of spam messages you receive, it's important to take steps such as being selective about sharing your email address, avoiding clicking on suspicious links or downloading attachments from unknown senders, and using spam filters to automatically block unwanted messages.</p>
+	<p>By being aware of the risks associated with phishing emails and spam messages, you can better protect yourself and your personal information online.</p>
+	<h1>Check your contents</h1>
+	<a href="email"><<img src="{{url_for('static', filename='email_image.jpg')}}"></a>
+	<a href="sms"><img src="{{url_for('static', filename='sms_image.png')}}"></a>
+	<p>Learn more <a href="about">About us</a>.</p>
+</body>
+</html>

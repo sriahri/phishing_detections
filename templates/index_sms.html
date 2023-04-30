@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CHECK WHETHER SMS IS SPAM SMS OR NOT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="jumbotron bg-primary text-center">SMS CHECK</h1>
+  <br><br>
+  <form class="form-horizontal" action="/enter" method="POST" enctype="multipart/form-data">
+
+    <div class="form-group">
+      <label class="control-label col-sm-3 col-md-2" for="sms_content">Enter the SMS content:</label>
+      <div class="col-sm-9 col-md-10">
+        <input type="text" class="form-control" placeholder="SMS content"  name="sms_content" id="sms_content">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-md-offset-2 col-sm-9 col-md-10">
+        <button type="submit" class="btn btn-success btn-block">Submit</button>
+      </div>
+    </div>
+  </form>
+
+  {% if prediction %}
+  <div class="result">
+    <p> This sms content: {{sms_content}}"</p>
+    <h2>This message is: <i>{{prediction}}</i></h2>
+  </div>
+  {% endif %}
+
+</div>
+
+</body>
+</html>
