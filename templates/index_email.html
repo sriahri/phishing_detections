@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CHECK WHETHER EMAIL IS PHISHING EMAIL OR NOT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+  </head>
+  <body>
+    <header class="jumbotron">
+      <h1>EMAIL CHECK</h1>
+    </header>
+    <main class="container">
+      <form class="form-horizontal" action="/submit" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label class="control-label" for="email_content">Enter the email content:</label>
+          <input type="text" class="form-control" placeholder="Email content"  name="email_content" id="email_content">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      </form>
+      {% if prediction %}
+      <div class="result">
+        <p> This email content: {{email_content}}"</p>
+        <h2>This email is: <i>{{prediction}}</i></h2>
+      </div>
+      {% endif %}
+    </main>
+    <footer class="text-center">
+      <p>&copy; 2023 Check Email</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
